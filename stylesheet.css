@@ -129,3 +129,22 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+@media screen and (max-width: 768px) {
+  .stack-on-mobile,
+  .stack-on-mobile > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .stack-on-mobile > td:first-child {
+    padding-bottom: 0 !important;
+    text-align: center;
+  }
+
+  .stack-on-mobile > td:last-child {
+    padding-top: 12px !important;
+  }
+}
