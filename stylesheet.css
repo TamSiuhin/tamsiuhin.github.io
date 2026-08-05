@@ -131,6 +131,59 @@ span.highlight {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  table {
+    max-width: 100%;
+  }
+
+  td,
+  p,
+  li {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  heading {
+    font-size: 20px;
+  }
+
+  name {
+    font-size: 26px;
+  }
+
+  /* header: photo above the intro text */
+  .intro-row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .intro-row > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding: 4% 5% !important;
+  }
+
+  .intro-row img {
+    width: 55% !important;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .news-box {
+    height: 220px !important;
+  }
+
+  .news-box ul {
+    padding-left: 20px;
+  }
+
+  /* publications */
   .stack-on-mobile,
   .stack-on-mobile > td {
     display: block;
@@ -144,7 +197,47 @@ span.highlight {
     text-align: center;
   }
 
+  .stack-on-mobile > td:first-child img {
+    width: 85% !important;
+    max-width: 340px;
+  }
+
   .stack-on-mobile > td:last-child {
     padding-top: 12px !important;
+  }
+
+  /* industrial experience & education */
+  .exp-table {
+    width: 100% !important;
+  }
+
+  .exp-table td {
+    padding: 12px 6px !important;
+    box-sizing: border-box;
+  }
+
+  .exp-table td:first-child {
+    width: 80px !important;
+    text-align: center;
+  }
+
+  .exp-table td:first-child img {
+    width: 100% !important;
+    max-width: 72px;
+  }
+
+  .exp-table td:last-child {
+    width: auto !important;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .exp-table td:first-child {
+    width: 60px !important;
+  }
+
+  .exp-table td:first-child img {
+    max-width: 54px;
   }
 }
