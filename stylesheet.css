@@ -214,8 +214,8 @@ span.highlight {
   }
 
   .cv-table td:first-child img {
-    width: 60% !important;
-    max-width: 240px;
+    width: 38% !important;
+    max-width: 140px;
   }
 
   .cv-table td:last-child {
