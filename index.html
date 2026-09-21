@@ -104,6 +104,67 @@
           </tr>
         </tbody></table>
 
+      <section class="research-overview" id="research-overview" aria-labelledby="research-title">
+        <div class="research-heading">
+          <h2 id="research-title">Research Overview</h2>
+          <a href="#selected-publications">Selected publications <span aria-hidden="true">↘</span></a>
+        </div>
+        <p class="research-intro">I study how user-generated content and behavior can help language models <strong>understand individuals</strong>, <strong>adapt to their needs</strong>, and <strong>learn from their preferences</strong>.</p>
+
+        <div class="research-map" role="group" aria-label="Three complementary research directions grounded in user data">
+          <div class="research-source">
+            <span class="research-source-title">User data</span>
+            <span class="research-source-detail">Content · Behavior · Preferences</span>
+          </div>
+
+          <div class="research-branches">
+            <article class="research-theme research-modeling" aria-labelledby="research-modeling-title">
+              <div class="research-theme-heading">
+                <span class="research-number" aria-hidden="true">01</span>
+                <h3 id="research-modeling-title">User Modeling</h3>
+              </div>
+              <p class="research-question">How can we understand users from their data?</p>
+              <p class="research-description">Connect user content and behavior with textual profiles and latent user representations.</p>
+              <ul class="research-works" aria-label="Selected work on user modeling">
+                <li><a href="#paper-blue"><span class="research-work-title">BLUE <span aria-hidden="true">↘</span></span><span class="research-work-detail">Profiles ↔ embeddings</span></a></li>
+                <li><a href="#paper-llm-um"><span class="research-work-title">LLM-UM <span aria-hidden="true">↘</span></span><span class="research-work-detail">A research perspective</span></a></li>
+              </ul>
+            </article>
+
+            <article class="research-theme research-personalization" aria-labelledby="research-personalization-title">
+              <div class="research-theme-heading">
+                <span class="research-number" aria-hidden="true">02</span>
+                <h3 id="research-personalization-title">Efficient Personalization</h3>
+              </div>
+              <p class="research-question">How can every user have a personal language model?</p>
+              <p class="research-description">Adapt language models through personal adapters, collaborative modules, and hypernetworks.</p>
+              <ul class="research-works" aria-label="Selected work on efficient personalization">
+                <li><a href="#paper-oppu"><span class="research-work-title">OPPU <span aria-hidden="true">↘</span></span><span class="research-work-detail">One adapter per user</span></a></li>
+                <li><a href="#paper-per-pcs"><span class="research-work-title">Per-Pcs <span aria-hidden="true">↘</span></span><span class="research-work-detail">Collaborative adapters</span></a></li>
+                <li><a href="#paper-profile-to-peft"><span class="research-work-title">Profile-to-PEFT <span aria-hidden="true">↘</span></span><span class="research-work-detail">Profiles → adapters</span></a></li>
+              </ul>
+            </article>
+
+            <article class="research-theme research-alignment" aria-labelledby="research-alignment-title">
+              <div class="research-theme-heading">
+                <span class="research-number" aria-hidden="true">03</span>
+                <h3 id="research-alignment-title">Alignment &amp; Evaluation</h3>
+              </div>
+              <p class="research-question">How can models learn and reflect human preferences?</p>
+              <p class="research-description">Learn from implicit preferences in user content and evaluate personalization in recommendation.</p>
+              <ul class="research-works" aria-label="Selected work on alignment and evaluation">
+                <li><a href="#paper-pugc"><span class="research-work-title">PUGC <span aria-hidden="true">↘</span></span><span class="research-work-detail">Implicit preference learning</span></a></li>
+                <li><a href="#paper-perrecbench"><span class="research-work-title">PerRecBench <span aria-hidden="true">↘</span></span><span class="research-work-detail">Evaluating personalization</span></a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <p class="research-foundation"><span>Earlier work</span> Modeling users and communities in social networks:
+          <a href="#paper-twibot-22">TwiBot-22</a> · <a href="#paper-botpercent">BotPercent</a>
+        </p>
+      </section>
+
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
         <tr>
           <td>
@@ -147,7 +208,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Selected Publications <font size=4>(* indicates equal contribution)</font> <font size=4>[<a href="https://scholar.google.com/citations?hl=en&user=0KE2CZsAAAAJ&view_op=list_works&sortby=pubdate"><font size=4><i>Google Scholar</i></font></a>]</font></heading>
+              <heading id="selected-publications">Selected Publications <font size=4>(* indicates equal contribution)</font> <font size=4>[<a href="https://scholar.google.com/citations?hl=en&user=0KE2CZsAAAAJ&view_op=list_works&sortby=pubdate"><font size=4><i>Google Scholar</i></font></a>]</font></heading>
               
 
             </td>
@@ -168,7 +229,7 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
-          <tr class="stack-on-mobile" style="vertical-align:left;">
+          <tr id="paper-blue" class="stack-on-mobile research-publication" style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
               <img src="images/BLUE.png" alt="3DSP" width="100%">
             </td>
@@ -193,7 +254,7 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
-          <tr class="stack-on-mobile" style="vertical-align:left;">
+          <tr id="paper-profile-to-peft" class="stack-on-mobile research-publication" style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
               <img src="images/P2P.png" alt="3DSP" width="100%">
             </td>
@@ -235,7 +296,7 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
-          <tr class="stack-on-mobile" style="vertical-align:left;">
+          <tr id="paper-pugc" class="stack-on-mobile research-publication" style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
               <img src="images/PUGC.png" alt="3DSP" width="100%">
             </td>
@@ -261,7 +322,7 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
-          <tr class="stack-on-mobile" style="vertical-align:left;">
+          <tr id="paper-perrecbench" class="stack-on-mobile research-publication" style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
               <img src="images/PerRecBench.png" alt="3DSP" width="100%">
             </td>
@@ -296,7 +357,7 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
-          <tr class="stack-on-mobile" style="vertical-align:left;">
+          <tr id="paper-per-pcs" class="stack-on-mobile research-publication" style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
               <img src="images/Per-Pcs.png" alt="3DSP" width="100%">
             </td>
@@ -315,7 +376,7 @@
             </td>
           </tr>
 
-          <tr class="stack-on-mobile" style="vertical-align:left;">
+          <tr id="paper-oppu" class="stack-on-mobile research-publication" style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
               <img src="images/OPPU.png" alt="3DSP" width="100%">
             </td>
@@ -369,7 +430,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
           
-          <tr class="stack-on-mobile" style="vertical-align:left;">
+          <tr id="paper-llm-um" class="stack-on-mobile research-publication" style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
               <img src="images/LLM-UM.png" alt="3DSP" width="90%">
             </td>
@@ -410,7 +471,7 @@
 
           
 
-          <tr class="stack-on-mobile" style="vertical-align:left;">
+          <tr id="paper-botpercent" class="stack-on-mobile research-publication" style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
               <img src="images/BotPercent.jpg" alt="3DSP" width="90%" >
             </td>
@@ -534,7 +595,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
           </tbody>
-          <tr class="stack-on-mobile" style="vertical-align:left;">
+          <tr id="paper-twibot-22" class="stack-on-mobile research-publication" style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
               <img src="images/Twibot-22.jpg" alt="3DSP" width="80%">
             </td>
