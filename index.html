@@ -137,8 +137,9 @@
                 <h3 id="research-personalization-title">Efficient Personalization</h3>
               </div>
               <p class="research-question">How can every user have a personal language model?</p>
-              <p class="research-description">Adapt language models through personal adapters, collaborative modules, and hypernetworks.</p>
+              <p class="research-description">Generate agent harnesses from user histories and adapt language models with personalized adapters.</p>
               <ul class="research-works" aria-label="Selected work on efficient personalization">
+                <li><a href="#paper-hyperharness"><span class="research-work-title">HyperHarness <span aria-hidden="true">↘</span></span><span class="research-work-detail">User histories → agent harnesses</span></a></li>
                 <li><a href="#paper-oppu"><span class="research-work-title">OPPU <span aria-hidden="true">↘</span></span><span class="research-work-detail">One adapter per user</span></a></li>
                 <li><a href="#paper-per-pcs"><span class="research-work-title">Per-Pcs <span aria-hidden="true">↘</span></span><span class="research-work-detail">Collaborative adapters</span></a></li>
                 <li><a href="#paper-profile-to-peft"><span class="research-work-title">Profile-to-PEFT <span aria-hidden="true">↘</span></span><span class="research-work-detail">Profiles → adapters</span></a></li>
@@ -151,8 +152,9 @@
                 <h3 id="research-alignment-title">Alignment &amp; Evaluation</h3>
               </div>
               <p class="research-question">How can models learn and reflect human preferences?</p>
-              <p class="research-description">Learn from implicit preferences in user content and evaluate personalization in recommendation.</p>
+              <p class="research-description">Learn from implicit preferences and evaluate how models support individual recommendations and group collaboration.</p>
               <ul class="research-works" aria-label="Selected work on alignment and evaluation">
+                <li><a href="#paper-groupbrief"><span class="research-work-title">GroupBrief <span aria-hidden="true">↘</span></span><span class="research-work-detail">Evaluating group briefings</span></a></li>
                 <li><a href="#paper-pugc"><span class="research-work-title">PUGC <span aria-hidden="true">↘</span></span><span class="research-work-detail">Implicit preference learning</span></a></li>
                 <li><a href="#paper-perrecbench"><span class="research-work-title">PerRecBench <span aria-hidden="true">↘</span></span><span class="research-work-detail">Evaluating personalization</span></a></li>
               </ul>
@@ -171,6 +173,8 @@
             <heading>🔥What's New</heading>
             <div class="news-box" style="height: 120px; overflow: auto;">
               <ul> 
+                <li> [2026.11] <a href="#paper-hyperharness">HyperHarness</a> learns to generate a personalized agent harness from each user’s history.</li>
+                <li> [2026.11] In <a href="#paper-groupbrief">GroupBrief</a>, we study how agents joining a team can reconstruct what its members know and where they disagree.</li>
                 <li> [2026.9] <a href="https://arxiv.org/abs/2605.06981" target="_blank">BLUE</a> and <a href="https://arxiv.org/abs/2605.10664" target="_blank">GCAD</a> were accepted to NeurIPS 2026!👏 </li>
                 <li> [2026.8] <a href="https://arxiv.org/abs/2509.19212v2" target="_blank">SafeCoDe</a> was accepted to EMNLP 2026 Main!👏 </li>
                 <li> [2026.4] 5 papers were accepted to ACL 2026!👏 Main: <a href="https://zhaoxuan.info/p2p.github.io/" target="_blank">Profile-to-PEFT</a>, Findings: <a href="https://arxiv.org/abs/2509.23767" target="_blank">LoGo</a>, <a href="https://arxiv.org/abs/2506.00845" target="_blank">GraphRL</a>, <a href="https://arxiv.org/abs/2601.13115" target="_blank">Agentic Conv. Search</a>, and <a href="https://arxiv.org/abs/2601.06757" target="_blank">MTMCS-Bench</a>.</li>
@@ -231,19 +235,6 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
-          <tr id="paper-groupbrief" class="stack-on-mobile research-publication">
-            <td style="padding:20px;width:35%;vertical-align:middle">
-              <img src="images/groupbrief.png" alt="An example of a group briefing for an agent joining an ongoing project" width="100%">
-            </td>
-            <td style="padding:20px;width:65%;vertical-align:middle">
-              <a href="data/groupbrief.pdf"><papertitle>Grounding Collaborative Agents in Group Cognition</papertitle></a>
-              <br>
-              <strong>Zhaoxuan Tan</strong>, Mengting Wan, Jingbo Yang, Kwei-Herng Lai, Renyi Qu, Lorenzo Jaime Flores, Meng Jiang, Longqi Yang, Victor Poznanski, Pei Zhou
-              <br>
-              <a href="data/groupbrief.pdf">PDF</a>
-              <p>We introduce group briefing, a task that asks an agent to reconstruct what team members believe, who owns which decisions, and where shared understanding breaks down. We evaluate GroupBrief on 1,351 requests across four domains.</p>
-            </td>
-          </tr>
           <tr id="paper-hyperharness" class="stack-on-mobile research-publication">
             <td style="padding:20px;width:35%;vertical-align:middle">
               <img src="images/hyperharness.png" alt="Comparison of per-user harness optimization and direct generation with HyperHarness" width="100%">
@@ -255,6 +246,19 @@
               <br>
               <a href="data/hyperharness.pdf">PDF</a>
               <p>HyperHarness learns to generate retrieval and answer-guidance code from each user’s history. A shared generator builds a harness for a new user in one pass, without running a separate optimization loop for that user.</p>
+            </td>
+          </tr>
+          <tr id="paper-groupbrief" class="stack-on-mobile research-publication">
+            <td style="padding:20px;width:35%;vertical-align:middle">
+              <img src="images/groupbrief.png" alt="An example of a group briefing for an agent joining an ongoing project" width="100%">
+            </td>
+            <td style="padding:20px;width:65%;vertical-align:middle">
+              <a href="data/groupbrief.pdf"><papertitle>Grounding Collaborative Agents in Group Cognition</papertitle></a>
+              <br>
+              <strong>Zhaoxuan Tan</strong>, Mengting Wan, Jingbo Yang, Kwei-Herng Lai, Renyi Qu, Lorenzo Jaime Flores, Meng Jiang, Longqi Yang, Victor Poznanski, Pei Zhou
+              <br>
+              <a href="data/groupbrief.pdf">PDF</a>
+              <p>We introduce group briefing, a task that asks an agent to reconstruct what team members believe, who owns which decisions, and where shared understanding breaks down. We evaluate GroupBrief on 1,351 requests across four domains.</p>
             </td>
           </tr>
           <tr id="paper-blue" class="stack-on-mobile research-publication" style="vertical-align:left;">
