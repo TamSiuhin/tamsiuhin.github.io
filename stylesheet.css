@@ -134,6 +134,11 @@ span.highlight {
 .research-overview {
   margin: 22px 20px 24px;
   color: #263341;
+  font-family: Verdana, Helvetica, sans-serif;
+}
+
+.research-overview :is(p, a, strong) {
+  font-family: inherit;
 }
 
 .research-heading {
