@@ -67,24 +67,11 @@
                 
             </details>
               
-              <p>Hi there, thanks for visiting my website! 
-                I'm a final-year CSE PhD candidate at the <a href="https://www.nd.edu/" target="_blank">University of Notre Dame</a>, fortunate to work with Prof. <a href="http://www.meng-jiang.com/">Meng Jiang</a>.
-                Prior to that, I obtained my bachelor's degree in computer science and technology at <a href="http://www.xjtu.edu.cn/">Xi'an Jiaotong University</a> (2019-2023) and had wonderful time doing research at the <a href="https://luoundergradxjtu.github.io/">LUD lab</a>, where I worked closely with <a href="https://bunsenfeng.github.io/">Shangbin Feng</a> and Prof. <a href="https://gr.xjtu.edu.cn/en/web/minnluo">Minnan Luo</a>. 
-              </p>
-              <!-- <p> 
-              My research generally focuses on user modeling {personalization, Twitter bot detection, suspiciousness detection} and natural language processing {(non-)parametric knowledge in LMs, knowledge graph reasoning}.
-              </p> -->
-              <!-- <p>
-                My primary research interest lies at the intersection of <i>graph mining</i> (especially knowledge graphs and social networks) and <i>natural language processing</i>, with a particular focus on <font color="#03045E"><strong>computation for social good</strong></font> and <font color="#31572C"><strong>LLMs for user modeling</strong></font>.
-              </p> -->
-              <p>
-                I play with user data, including user-generated content and user behavior data, to personalize and enhance Large Language Models, as well as to detect suspicious user behavior.
-              </p>
+              <p>I'm a final-year PhD candidate in Computer Science and Engineering at the <a href="https://www.nd.edu/">University of Notre Dame</a>, advised by <a href="https://meng-jiang.com/">Meng Jiang</a>. I build <strong>personalized foundation models and agents</strong> that learn from what people write and how they interact.</p>
+              <p>My research asks how a model can infer someone’s preferences from their history and adapt to a new user without a separate round of training. I also study what agents should remember over time, both for one person and for a team whose members may remember the same conversation differently.</p>
+              <p>Before Notre Dame, I studied computer science at <a href="http://www.xjtu.edu.cn/">Xi’an Jiaotong University</a> (2019–2023), where I worked with <a href="https://bunsenfeng.github.io/">Shangbin Feng</a> and <a href="https://gr.xjtu.edu.cn/en/web/minnluo">Minnan Luo</a> in the <a href="https://luoundergradxjtu.github.io/">LUD lab</a>.</p>
               <p style="border: 1px solid #f0b7b7; border-left: 4px solid #d93025; background: #fdf3f2; border-radius: 6px; padding: 10px 14px; margin: 14px 0;">
                 <strong style="color: red;">I'm on the job market and seeking full-time Research Scientist or Applied Scientist positions in industry. If you think I might be a good fit, please feel free to reach out to me via <a href="mailto:ztan3@nd.edu">email</a>!</strong>
-              </p>
-              <p> 
-                Please feel free to drop me an Email for any form of communication or collaboration!☘️ 
               </p>
               <p style="text-align:center"> 
                 Email:&nbsp  <b><span style="background: #d6eef8;"><code>ztan3 [at] nd [dot] edu</code></span> &nbsp/&nbsp <span style="background: #d6eef8;"><code>tanzx9 [at] gmail [dot] com</code></b></span>
@@ -109,62 +96,50 @@
           <h2 id="research-title">Research Overview</h2>
           <a href="#selected-publications">Selected publications <span aria-hidden="true">↘</span></a>
         </div>
-        <p class="research-intro">I study how user-generated content and behavior can help language models <strong>understand individuals</strong>, <strong>adapt to their needs</strong>, and <strong>learn from their preferences</strong>.</p>
+        <p class="research-intro">When two people ask the same question, their histories can make different answers appropriate. My work explores what those histories reveal, how they can shape a model, and what an agent needs to remember when several people work together.</p>
 
-        <div class="research-map" role="group" aria-label="Three complementary research directions grounded in user data">
-          <div class="research-source">
-            <span class="research-source-title">User data</span>
-            <span class="research-source-detail">Content · Behavior · Preferences</span>
-          </div>
+        <div class="research-map">
+          <article class="research-thread research-preferences" aria-labelledby="research-modeling-title">
+            <header>
+              <h3 id="research-modeling-title">Reading preferences from behavior</h3>
+              <p>What can we learn about someone’s tastes when they have never explicitly ranked two options?</p>
+            </header>
+            <ul class="research-works">
+              <li><a href="#paper-blue">BLUE</a> learns to write user profiles that help predict what someone will choose next.</li>
+              <li><a href="#paper-pugc">PUGC</a> turns what people write into preference pairs for training language models.</li>
+              <li><a href="#paper-perrecbench">PerRecBench</a> tests whether a recommender can distinguish individual taste from item quality and rating habits.</li>
+            </ul>
+          </article>
 
-          <div class="research-branches">
-            <article class="research-theme research-modeling" aria-labelledby="research-modeling-title">
-              <div class="research-theme-heading">
-                <span class="research-number" aria-hidden="true">01</span>
-                <h3 id="research-modeling-title">User Modeling</h3>
-              </div>
-              <p class="research-question">How can we understand users from their data?</p>
-              <p class="research-description">Connect user content and behavior with textual profiles and latent user representations.</p>
-              <ul class="research-works" aria-label="Selected work on user modeling">
-                <li><a href="#paper-blue"><span class="research-work-title">BLUE <span aria-hidden="true">↘</span></span><span class="research-work-detail">Profiles ↔ embeddings</span></a></li>
-                <li><a href="#paper-llm-um"><span class="research-work-title">LLM-UM <span aria-hidden="true">↘</span></span><span class="research-work-detail">A research perspective</span></a></li>
-              </ul>
-            </article>
+          <p class="research-bridge">A profile can also guide adaptation. <strong>BLUE</strong> asks what the profile should say. <strong>Profile-to-PEFT</strong> asks how to turn that description into adapter weights.</p>
 
-            <article class="research-theme research-personalization" aria-labelledby="research-personalization-title">
-              <div class="research-theme-heading">
-                <span class="research-number" aria-hidden="true">02</span>
-                <h3 id="research-personalization-title">Efficient Personalization</h3>
-              </div>
-              <p class="research-question">How can every user have a personal language model?</p>
-              <p class="research-description">Generate agent harnesses from user histories and adapt language models with personalized adapters.</p>
-              <ul class="research-works" aria-label="Selected work on efficient personalization">
-                <li><a href="#paper-oppu"><span class="research-work-title">OPPU <span aria-hidden="true">↘</span></span><span class="research-work-detail">One adapter per user</span></a></li>
-                <li><a href="#paper-per-pcs"><span class="research-work-title">Per-Pcs <span aria-hidden="true">↘</span></span><span class="research-work-detail">Collaborative adapters</span></a></li>
-                <li><a href="#paper-profile-to-peft"><span class="research-work-title">Profile-to-PEFT <span aria-hidden="true">↘</span></span><span class="research-work-detail">Profiles → adapters</span></a></li>
-                <li><a href="#paper-hyperharness"><span class="research-work-title">HyperHarness <span aria-hidden="true">↘</span></span><span class="research-work-detail">User histories → agent harnesses</span></a></li>
-              </ul>
-            </article>
+          <article class="research-thread research-adapters" aria-labelledby="research-personalization-title">
+            <header>
+              <h3 id="research-personalization-title">A model for each person</h3>
+              <p>How much learning has to happen again when a new user arrives?</p>
+            </header>
+            <ul class="research-works">
+              <li><a href="#paper-oppu">OPPU</a> trains a small adapter for each user while keeping the base model frozen.</li>
+              <li><a href="#paper-per-pcs">Per-Pcs</a> lets users share and assemble adapters.</li>
+              <li><a href="#paper-profile-to-peft">Profile-to-PEFT</a> generates adapter weights directly from a new user’s profile.</li>
+            </ul>
+          </article>
 
-            <article class="research-theme research-alignment" aria-labelledby="research-alignment-title">
-              <div class="research-theme-heading">
-                <span class="research-number" aria-hidden="true">03</span>
-                <h3 id="research-alignment-title">Alignment &amp; Evaluation</h3>
-              </div>
-              <p class="research-question">How can models learn and reflect human preferences?</p>
-              <p class="research-description">Learn from implicit preferences and evaluate how models support individual recommendations and group collaboration.</p>
-              <ul class="research-works" aria-label="Selected work on alignment and evaluation">
-                <li><a href="#paper-groupbrief"><span class="research-work-title">GroupBrief <span aria-hidden="true">↘</span></span><span class="research-work-detail">Evaluating group briefings</span></a></li>
-                <li><a href="#paper-pugc"><span class="research-work-title">PUGC <span aria-hidden="true">↘</span></span><span class="research-work-detail">Implicit preference learning</span></a></li>
-                <li><a href="#paper-perrecbench"><span class="research-work-title">PerRecBench <span aria-hidden="true">↘</span></span><span class="research-work-detail">Evaluating personalization</span></a></li>
-              </ul>
-            </article>
-          </div>
+          <p class="research-bridge"><strong>Profile-to-PEFT</strong> and <strong>HyperHarness</strong> share a design choice. Both learn a generator across users, then run it once for a new person. One generates adapter weights, the other generates agent code.</p>
+
+          <article class="research-thread research-memory" aria-labelledby="research-memory-title">
+            <header>
+              <h3 id="research-memory-title">Memory for individuals and teams</h3>
+              <p>Which details from past interactions matter for the decision at hand, and whose perspective do they represent?</p>
+            </header>
+            <ul class="research-works">
+              <li><a href="#paper-hyperharness">HyperHarness</a> learns across users to build a retrieval and answer strategy tailored to each person’s history.</li>
+              <li><a href="#paper-groupbrief">GroupBrief</a> reconstructs a team’s working context, including who owns a decision and where people still disagree.</li>
+            </ul>
+          </article>
         </div>
 
-        <p class="research-foundation"><span>Earlier work</span> Modeling users and communities in social networks:
-          <a href="#paper-twibot-22">TwiBot-22</a> · <a href="#paper-botpercent">BotPercent</a>
-        </p>
+        <p class="research-foundation"><strong>Foundations in user modeling.</strong> My earlier work studied individual accounts in <a href="#paper-twibot-22">TwiBot-22</a> and communities in <a href="#paper-botpercent">BotPercent</a>. <a href="#paper-llm-um">LLM-UM</a> surveys how language models can represent users from text and social connections.</p>
       </section>
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
