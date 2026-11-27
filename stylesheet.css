@@ -213,9 +213,16 @@ span.highlight {
   height: auto;
 }
 
-.research-direction span {
+.direction-label {
   color: #e3eaf1;
+  font-size: 1rem;
   font-weight: 700;
+}
+
+.direction-purpose {
+  color: var(--signal);
+  font-size: .875rem;
+  line-height: 1.4;
 }
 
 .research-direction:is(:hover, :focus, [aria-selected="true"]) {
@@ -227,7 +234,7 @@ span.highlight {
   border-bottom-color: var(--signal);
 }
 
-.research-direction[aria-selected="true"] span::before {
+.research-direction[aria-selected="true"] .direction-label::before {
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -337,7 +344,11 @@ span.highlight {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .research-direction[aria-selected="true"] span::before {
+  .direction-label {
+    font-size: .875rem;
+  }
+
+  .research-direction[aria-selected="true"] .direction-label::before {
     display: none;
   }
 }

@@ -28,7 +28,7 @@
   <meta name="twitter:description" content="CSE PhD candidate at the University of Notre Dame working on personalized large language models, user modeling, and LLM alignment. Seeking full-time Research Scientist / Applied Scientist positions in industry.">
   <meta name="twitter:image" content="https://zhaoxuan.info/images/zhaoxuan_photo.jpeg">
 
-  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=c6eba378d5">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=8f9f769f63">
   <link rel="icon" href="images/nd.gif">
 
   <!-- Analytics: the old UA-211172484-2 property stopped collecting data in July 2023.
@@ -94,9 +94,9 @@
       <section class="research-overview" id="research-overview" aria-labelledby="research-title">
         <div class="research-heading">
           <h2 id="research-title">Research Overview</h2>
-          <a href="#selected-publications">Selected publications <span aria-hidden="true">↘</span></a>
+          <a href="#selected-publications">Selected publications</a>
         </div>
-        <p class="research-intro">Every user has their own preferences, reflected in what they write and the choices they make. I study how models can infer those preferences from interaction histories and adapt to each individual. In team settings, I study how agents can draw on a shared history while keeping track of each member’s perspective.</p>
+        <p class="research-intro">My goal is to build AI that understands and adapts to users over time. I study how to infer preferences from everyday behavior, turn those preferences into personalized model behavior, and use memory to support individual users and teams in their ongoing work.</p>
 
         <div class="research-map">
           <nav class="research-directions" aria-label="Research directions">
@@ -112,7 +112,8 @@
                   </g>
                 </g>
               </svg>
-              <span>Preference signals</span>
+              <span class="direction-label">Preference signals</span>
+              <span class="direction-purpose">Understand users</span>
             </a>
             <a class="research-direction adapters" href="#research-personalization-title" id="direction-adapters">
               <svg viewBox="0 0 215 82" aria-hidden="true" focusable="false">
@@ -126,7 +127,8 @@
                   <path opacity=".7" d="M23 29h13m145 0h13m-20 19h20" stroke-dasharray="2 3"/>
                 </g>
               </svg>
-              <span>Personal models</span>
+              <span class="direction-label">Personal models</span>
+              <span class="direction-purpose">Adapt model behavior</span>
             </a>
             <a class="research-direction memory" href="#research-memory-title" id="direction-memory">
               <svg viewBox="0 0 215 82" aria-hidden="true" focusable="false">
@@ -138,30 +140,31 @@
                   <g fill="#20263c" stroke-width="2.2"><circle cx="29" cy="22" r="4"/><circle cx="55" cy="43" r="4"/><circle cx="46" cy="65" r="4"/><circle cx="111" cy="22" r="5"/><circle cx="126" cy="45" r="4"/><circle cx="113" cy="64" r="4"/><circle cx="188" cy="64" r="4"/></g>
                 </g>
               </svg>
-              <span>Agent memory</span>
+              <span class="direction-label">Agent memory</span>
+              <span class="direction-purpose">Carry context forward</span>
             </a>
           </nav>
 
           <article class="research-thread preferences" id="research-modeling-title" aria-labelledby="direction-preferences">
             <header class="research-question">
               <h3>Reading preferences from behavior</h3>
-              <p>What can we learn about someone’s tastes when they have never explicitly ranked two options?</p>
+              <p>What matters to a user, and how can we learn it from what they write and choose?</p>
             </header>
             <ul class="research-works">
-              <li><a href="#paper-blue">BLUE</a> learns to write user profiles that help predict what someone will choose next.</li>
-              <li><a href="#paper-pugc">PUGC</a> turns what people write into preference pairs for training language models.</li>
+              <li><a href="#paper-blue">BLUE</a> learns to write user profiles that help predict what a user will choose next.</li>
+              <li><a href="#paper-pugc">PUGC</a> turns what users write into preference pairs for training language models.</li>
               <li><a href="#paper-perrecbench">PerRecBench</a> tests whether a recommender can distinguish individual taste from item quality and rating habits.</li>
             </ul>
             <aside class="research-bridge">
-              <strong>From profiles to adapters</strong>
-              <p>A profile can describe what matters to someone. The next question is how those preferences can guide the answers a model gives them without a separate round of training for each person.</p>
+              <strong>From understanding to adaptation</strong>
+              <p>Profiles and preference data capture what matters to users. The next step is to turn that understanding into model behavior, while reducing the cost of adapting to each new user.</p>
             </aside>
           </article>
 
           <article class="research-thread adapters" id="research-personalization-title" aria-labelledby="direction-adapters">
             <header class="research-question">
-              <h3>A model for each person</h3>
-              <p>How much learning has to happen again when a new user arrives?</p>
+              <h3>A model for each user</h3>
+              <p>How can a model act on those preferences without starting the adaptation process from scratch for every user?</p>
             </header>
             <ul class="research-works">
               <li><a href="#paper-oppu">OPPU</a> trains a small adapter for each user while keeping the base model frozen.</li>
@@ -169,28 +172,28 @@
               <li><a href="#paper-profile-to-peft">Profile-to-PEFT</a> generates adapter weights directly from a new user’s profile.</li>
             </ul>
             <aside class="research-bridge">
-              <strong>From weights to harness</strong>
-              <p>A user’s preferences can also guide how an agent uses memory. Personalizing its retrieval strategy lets the agent choose which past interactions to consult and which details to use in an answer.</p>
+              <strong>From adaptation to ongoing interaction</strong>
+              <p>Supporting a user over time also requires knowing which past interactions matter now. This extends personalization from model weights to the way an agent retrieves and uses memory.</p>
             </aside>
           </article>
 
           <article class="research-thread memory" id="research-memory-title" aria-labelledby="direction-memory">
             <header class="research-question">
-              <h3>Memory for individuals and teams</h3>
-              <p>Which details from past interactions matter for the decision at hand, and whose perspective do they represent?</p>
+              <h3>Memory for individual users and teams</h3>
+              <p>How can an agent use interaction history to support ongoing work while keeping track of each user’s perspective?</p>
             </header>
             <ul class="research-works">
-              <li><a href="#paper-hyperharness">HyperHarness</a> learns across users to build a retrieval and answer strategy tailored to each person’s history.</li>
-              <li><a href="#paper-groupbrief">GroupBrief</a> reconstructs a team’s working context, including who owns a decision and where people still disagree.</li>
+              <li><a href="#paper-hyperharness">HyperHarness</a> learns across users to build a retrieval and answer strategy tailored to each user’s history.</li>
+              <li><a href="#paper-groupbrief">GroupBrief</a> reconstructs a team’s working context, including who owns a decision and where users still disagree.</li>
             </ul>
             <aside class="research-bridge">
-              <strong>From individual to shared history</strong>
-              <p>People can leave the same meeting with different ideas about what was decided. An agent helping the team needs to remember who agreed to what and which questions are still open.</p>
+              <strong>Toward lasting support for users and teams</strong>
+              <p>Together, these directions connect what users prefer, how models respond, and what agents remember. The goal is AI that can draw on individual and shared histories to support ongoing work while preserving each user’s perspective.</p>
             </aside>
           </article>
         </div>
 
-        <p class="research-foundation"><strong>Foundations in user modeling.</strong> My earlier work studied individual accounts in <a href="#paper-twibot-22">TwiBot-22</a> and communities in <a href="#paper-botpercent">BotPercent</a>. <a href="#paper-llm-um">LLM-UM</a> surveys how language models can represent users from text and social connections.</p>
+        <p class="research-foundation"><strong>Foundations in user modeling.</strong> This agenda builds on my earlier work studying individual accounts in <a href="#paper-twibot-22">TwiBot-22</a> and communities in <a href="#paper-botpercent">BotPercent</a>. <a href="#paper-llm-um">LLM-UM</a> surveys how language models can represent users from text and social connections.</p>
       </section>
       <script src="research-overview.js" defer></script>
 
